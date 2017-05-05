@@ -1,10 +1,3 @@
-require('./module-1.js');
-require('./module-2.js');
-
-
-
-
-/*
 import _ from 'lodash';
 
 function component () {
@@ -28,4 +21,3 @@ function component2 () {
 
 document.body.appendChild(component());
 document.body.appendChild(component2());
-*/
