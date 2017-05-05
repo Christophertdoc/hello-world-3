@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -79,7 +79,7 @@ console.log("module 1 stuff");
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
 
 
@@ -108,43 +108,33 @@ document.body.appendChild(component2());
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(0);
-__webpack_require__(1);
-
-
-
+/***/ (function(module, exports) {
 
 /*
-import _ from 'lodash';
+var React = require('react');
+var ReactDOM = require('react-dom');
 
-function component () {
-  var element = document.createElement('div');
+var Hello = React.createClass({
+    render: function() {
+        return <div>Hello, haters!</div>;
+    }
+});
 
-
-
- element.innerHTML = _.join(['Hello','webpack'], ' ');
-
-  return element;
-}
-
-function component2 () {
-  var element = document.createElement('div');
-
-
-  element.innerHTML = _.join(['Hello','webpack2'], ' ');
-
-  return element;
-}
-
-document.body.appendChild(component());
-document.body.appendChild(component2());
+ReactDOM.render(<Hello />, document.getElementById('container'));
 */
 
 
 /***/ }),
 /* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(0);
+__webpack_require__(1);
+__webpack_require__(2);
+
+
+/***/ }),
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -17233,10 +17223,10 @@ document.body.appendChild(component2());
   }
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), __webpack_require__(5)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5), __webpack_require__(6)(module)))
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports) {
 
 var g;
@@ -17263,7 +17253,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
