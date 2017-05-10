@@ -6,9 +6,9 @@
 /******/ 	function __webpack_require__(moduleId) {
 /******/
 /******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId])
+/******/ 		if(installedModules[moduleId]) {
 /******/ 			return installedModules[moduleId].exports;
-/******/
+/******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			i: moduleId,
@@ -68,36 +68,38 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-console.log("module 1 stuff"); 
+"use strict";
 
+
+console.log("module 1 stuff");
 
 /***/ }),
 /* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
 
 
-function component () {
+var _lodash = __webpack_require__(4);
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function component() {
   var element = document.createElement('div');
 
-
-
- element.innerHTML = __WEBPACK_IMPORTED_MODULE_0_lodash___default.a.join(['Hello','webpack'], ' ');
+  element.innerHTML = _lodash2.default.join(['Hello', 'webpack'], ' ');
 
   return element;
 }
 
-function component2 () {
+function component2() {
   var element = document.createElement('div');
 
-
-  element.innerHTML = __WEBPACK_IMPORTED_MODULE_0_lodash___default.a.join(['Hello','webpack2'], ' ');
+  element.innerHTML = _lodash2.default.join(['Hello', 'webpack2'], ' ');
 
   return element;
 }
@@ -105,33 +107,22 @@ function component2 () {
 document.body.appendChild(component());
 document.body.appendChild(component2());
 
-
 /***/ }),
 /* 2 */
 /***/ (function(module, exports) {
 
-/*
-var React = require('react');
-var ReactDOM = require('react-dom');
-
-var Hello = React.createClass({
-    render: function() {
-        return <div>Hello, haters!</div>;
-    }
-});
-
-ReactDOM.render(<Hello />, document.getElementById('container'));
-*/
-
+throw new Error("Module build failed: SyntaxError: Unexpected token (11:16)\n\n\u001b[0m \u001b[90m  9 | \u001b[39m})\u001b[33m;\u001b[39m\n \u001b[90m 10 | \u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 | \u001b[39m\u001b[33mReactDOM\u001b[39m\u001b[33m.\u001b[39mrender(\u001b[33m<\u001b[39m\u001b[33mHello\u001b[39m \u001b[33m/\u001b[39m\u001b[33m>\u001b[39m\u001b[33m,\u001b[39m document\u001b[33m.\u001b[39mgetElementById(\u001b[32m'container'\u001b[39m))\u001b[33m;\u001b[39m\n \u001b[90m    | \u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 | \u001b[39m\u001b[0m\n");
 
 /***/ }),
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+
+
 __webpack_require__(0);
 __webpack_require__(1);
 __webpack_require__(2);
-
 
 /***/ }),
 /* 4 */
